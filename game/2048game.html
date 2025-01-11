@@ -13,17 +13,23 @@
             height: 100vh;
             background-color: #faf8ef;
             margin: 0;
+            overflow: hidden; /* 防止页面滚动 */
         }
         #game {
             background-color: #bbada0;
             padding: 10px;
             border-radius: 5px;
+            width: 90vw; /* 宽度为视口宽度的 90% */
+            max-width: 400px; /* 最大宽度为 400px，避免在大屏幕上过大 */
+            aspect-ratio: 1; /* 保持正方形 */
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(4, 100px);
-            grid-template-rows: repeat(4, 100px);
+            grid-template-columns: repeat(4, 1fr); /* 使用 1fr 平分空间 */
+            grid-template-rows: repeat(4, 1fr);
             gap: 10px;
+            width: 100%; /* 宽度为父容器的 100% */
+            height: 100%; /* 高度为父容器的 100% */
         }
         .cell {
             background-color: #cdc1b4;
@@ -31,9 +37,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 5vmin; /* 字体大小根据视口大小动态调整 */
             font-weight: bold;
             color: #776e65;
+            aspect-ratio: 1; /* 保持正方形 */
         }
         .tile {
             width: 100%;
@@ -42,9 +49,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 5vmin; /* 字体大小根据视口大小动态调整 */
             font-weight: bold;
             color: #776e65;
+            background-color: #eee4da;
         }
         #game-over {
             display: none;
@@ -56,10 +64,11 @@
             padding: 20px;
             border-radius: 5px;
             text-align: center;
+            font-size: 4vmin; /* 字体大小根据视口大小动态调整 */
         }
         #score {
             margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 4vmin; /* 字体大小根据视口大小动态调整 */
             font-weight: bold;
             color: #776e65;
         }
