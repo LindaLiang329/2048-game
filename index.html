@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏仓库</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #faf8ef;
+            margin: 0;
+        }
+        #start-button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #8f7a66;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #start-button:hover {
+            background-color: #9c8a77;
+        }
+    </style>
+</head>
+<body>
+    <button id="start-button">开始2048游戏</button>
+
+    <script>
+        // 获取按钮元素
+        const startButton = document.getElementById('start-button');
+
+        // 添加点击事件监听器
+        startButton.addEventListener('click', () => {
+            // 跳转到 2048 游戏页面
+            window.location.href = '2048game.html';
+        });
+    </script>
+</body>
+</html>
